@@ -4,7 +4,7 @@ day = 1
 
 while True:
     if res >= stop:
-        break
+        breakка 
     day += 1
     res = res * 1.1
 

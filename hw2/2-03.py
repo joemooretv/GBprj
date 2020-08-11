@@ -11,39 +11,32 @@ if month > 12 or month <= 0:
     print('Wrong number!')
     exit()
 
-# Словарь
+# Заводим список множеств значений для месяцев
+seasons_ids = [[12, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10, 11]]
 
-seasons_dict = {12: 'winter',
-                1: 'winter',
-                2: 'winter',
-                3: 'spring',
-                4: 'spring',
-                5: 'spring',
-                6: 'summer',
-                7: 'summer',
-                8: 'summer',
-                9: 'fall',
-                10: 'fall',
-                11: 'fall',
-                }
-
-print(f'Dict result: {seasons_dict[month]}')
-
-# Список
-
+# Заводим список времен года
 seasons_list = ['winter',
                 'spring',
                 'summer',
                 'fall'
                 ]
 
-if month == 12 or 0 < month < 3:
-    month = 0
-elif 2 < month < 6:
-    month = 1
-elif 5 < month < 9:
-    month = 2
-else:
-    month = 3
+# Создаем пустой словарь
+seasons_dict = {}
 
-print(f'List result: {seasons_list[month]}')
+# Проходим по каждому множеству месяцев
+for key, value in enumerate(seasons_ids):
+
+    # Проверяем, есть ли введенный месяц в текущем множестве
+    if month in value:
+        # Выводим сезон по ключу множества
+        print(f'List result: {seasons_list[key]}')
+
+    # Проходим по каждому элементу множеств уаполняем пустой словарь
+    for months in value:
+        # Записываем текущее значение из множества месяцов
+        # в пару с сезоном по ключу множества
+        seasons_dict.update({months: seasons_list[key]})
+
+# Выводим сезон по введенному месяцу, как ключу словаря
+print(f'Dict result: {seasons_dict[month]}')

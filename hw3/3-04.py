@@ -1,8 +1,29 @@
+"""Программа принимает действительное положительное число x и целое отрицательное число y. Необходимо выполнить
+возведение числа x в степень y. Задание необходимо реализовать в виде функции my_func(x, y). При решении задания
+необходимо обойтись без встроенной функции возведения числа в степень. """
+
+
 def my_func(x, y):
-    res = x
-    for i in range(y):
-        res = res * x
-    return res
+    # проверка на тип
+    try:
+
+        # проверка на число
+        if y > -1 or x <= 0:
+            return 'Wrong number'
+
+        # решение простым способом
+        out2 = 1 / x ** abs(y)
+
+        # решение сложным
+        res = x
+        for i in range(1, abs(y)):
+            res = res * x
+        out = 1 / res
+
+        # вывод результата
+        return f'1st res: {round(out, 3)}\n2nd res: {round(out2, 3)}'
+    except TypeError:
+        return 'Wrong type'
 
 
-print(my_func(2, 3))
+print(my_func(0.087, -6))

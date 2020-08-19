@@ -12,3 +12,4 @@ except ValueError:
     print('wrong argument format')
 
 print((22 * 33) + 7)
+print(salary(22, 33, 7))

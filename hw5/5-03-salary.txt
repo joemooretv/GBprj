@@ -1,0 +1,12 @@
+Smirnov 18746.14
+Sidorova 19546.26
+Ivanov 23747.32
+Ushakova 13777.68
+Grishakov 20000
+Dmitreeva 20000.01
+Pavlov 19999.99
+Kuzmina 25674.13
+Volkov 23747.32
+Usachev 13767.68
+Gracheva 17746.14
+Nesterov 24874.13

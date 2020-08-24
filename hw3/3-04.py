@@ -21,9 +21,10 @@ def my_func(x, y):
         out = 1 / res
 
         # вывод результата
-        return f'1st res: {round(out, 3)}\n2nd res: {round(out2, 3)}'
+        return f'1st res: {out}\n2nd res: {out2}'
     except TypeError:
         return 'Wrong type'
 
 
-print(my_func(0.087, -6))
+print(my_func(16, -6))
+print(pow(16, -6))

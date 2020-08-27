@@ -11,15 +11,14 @@ import time
 
 
 class TrafficLight:
-    __color = 'reeed'
+    __color: str = 'red'
 
     def running(self, len_red: int, len_yellow: int, len_green: int):
-        start = time.time()
-        prev_time = start
-        switch = {'red': 7, 'yellow': 2, 'green': 5}
+        switch = {'red': len_red, 'yellow': len_yellow, 'green': len_green}
         while True:
             for k, v in switch.items():
                 self.__color = k
+                print(f'- switched to {self.__color}')
                 time.sleep(v)
 
     def get_colour(self):
@@ -27,7 +26,4 @@ class TrafficLight:
 
 
 a = TrafficLight()
-b = a.running(2, 2, 5)
-time.sleep(3)
-c = a.running(7, 2, 5)
-
+print(a.running(7, 5, 3))

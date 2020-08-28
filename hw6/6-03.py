@@ -8,15 +8,12 @@ income (доход). Последний атрибут должен быть з�
 
 class Worker:
     name: str
-    surname: str
+    surname: int
     position: str
     __income: {}
 
-    def __init__(self, name, surname, position, income):
-        self.name = name
-        self.surname = surname
-        self.position = position
-        self.__income = income
+    def __init__(self, name: str, surname, position, income):
+        self.name, self.surname, self.position, self.__income = name, surname, position, income
 
 
 class Position(Worker):
@@ -28,7 +25,7 @@ class Position(Worker):
         return self.__income('wage') + self.__income('bonus')
 
 
-a = Worker('John', 145, 'Supervisor', 1236)
+a = Worker('John', 'Doe', 'Supervisor', 1236)
 print(a.surname)
 
 b = Worker

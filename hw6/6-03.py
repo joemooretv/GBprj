@@ -10,10 +10,29 @@ class Worker:
     name: str
     surname: str
     position: str
-    __income = {}
+    __income: {}
+
+    def __init__(self, name, surname, position, income):
+        self.name = name
+        self.surname = surname
+        self.position = position
+        self.__income = income
 
 
 class Position(Worker):
 
     def get_full_name(self):
         return f'{self.name} {self.surname}'
+
+    def get_total_income(self):
+        return self.__income('wage') + self.__income('bonus')
+
+
+a = Worker('John', 145, 'Supervisor', 1236)
+print(a.surname)
+
+b = Worker
+print(b)
+
+c = Position('Dohn', 'Toe', 'Hypervisor', 1236)
+print(c.get_full_name())

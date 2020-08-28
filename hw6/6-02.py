@@ -8,8 +8,8 @@ class Road:
     _length: int
     _width: int
 
-    def __init__(self, _length_m, _width_m):
-        self._length, self._width = _length_m, _width_m
+    def __init__(self, length_m, width_m):
+        self._length, self._width = length_m, width_m
 
     def asphalt_mass(self, mass_cm_sq_m, depth_cm):
         return self._length * self._width * mass_cm_sq_m * depth_cm

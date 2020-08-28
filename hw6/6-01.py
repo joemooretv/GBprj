@@ -21,9 +21,6 @@ class TrafficLight:
                 print(f'- switched to {self.__color}')
                 time.sleep(v)
 
-    def get_colour(self):
-        return self.__color
-
 
 a = TrafficLight()
 print(a.running(7, 5, 3))

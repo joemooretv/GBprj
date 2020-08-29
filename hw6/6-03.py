@@ -8,11 +8,11 @@ income (доход). Последний атрибут должен быть з�
 
 class Worker:
     name: str
-    surname: int
+    surname: str
     position: str
     __income: {}
 
-    def __init__(self, name: str, surname, position, income):
+    def __init__(self, name: str, surname: str, position: str, income: dict):
         self.name, self.surname, self.position, self.__income = name, surname, position, income
 
     def get_income(self, param):
